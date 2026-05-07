@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 
@@ -413,15 +414,53 @@ app.post('/api/migrate', async (req, res) => {
     }
 });
 
-// ============ FRONTEND ROUTES ============
-app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dashboard.html'));
+// ============ ADMIN AUTH ============
+const JWT_SECRET = process.env.JWT_SECRET || 'SunPro@2024Secure!';
+const ADMIN_USER = process.env.ADMIN_USER || 'sunpro_admin';
+const ADMIN_PASS = process.env.ADMIN_PASS || 'SunPro@2024';
+
+// Admin Login
+app.post('/api/admin/login', (req, res) => {
+    const { username, password } = req.body;
+    
+    if (username === ADMIN_USER && password === ADMIN_PASS) {
+        const token = jwt.sign(
+            { admin: true, username: username }, 
+            JWT_SECRET, 
+            { expiresIn: '24h' }
+        );
+        console.log('✅ Admin login successful');
+        res.json({ success: true, token: token });
+    } else {
+        res.status(401).json({ success: false, message: 'Invalid credentials' });
+    }
 });
 
+// Protected Dashboard
+app.get('/dashboard', (req, res) => {
+    const token = req.query.token;
+    if (token) {
+        try {
+            jwt.verify(token, JWT_SECRET);
+            res.sendFile(path.join(__dirname, 'dashboard.html'));
+            return;
+        } catch (error) {
+            res.redirect('/admin-login');
+            return;
+        }
+    }
+    res.redirect('/admin-login');
+});
+
+// Login Page
+app.get('/admin-login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+
+// ============ FRONTEND ROUTES ============
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
-
 // ============ ERROR HANDLERS ============
 app.use((req, res) => {
     res.status(404).json({ 
