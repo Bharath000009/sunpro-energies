@@ -125,7 +125,7 @@
                 
                 if (data.success) {
                     localStorage.setItem('adminToken', data.token);
-                    window.location.href = '/dashboard';
+                    window.location.href = '/dashboard?token=' + data.token;
                 } else {
                     errorEl.textContent = data.message || 'Invalid credentials';
                     errorEl.style.display = 'block';
