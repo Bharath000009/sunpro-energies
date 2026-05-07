@@ -1,0 +1,3232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>SunPro Energies - Premier Solar Power Solutions | MNRE Approved</title>
+    <meta name="description"
+        content="India's leading solar energy solutions provider offering premium residential, commercial, and industrial solar installations. MNRE approved with subsidies up to ₹78,000.">
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #D9440D;
+            --primary-dark: #C13A0A;
+            --primary-light: #E8551E;
+            --bg-light: #FFFFFF;
+            --bg-light-secondary: #F8F9FA;
+            --text-dark: #1A1A1A;
+            --text-gray: #666666;
+            --text-muted: #999999;
+            --border-light: #E0E0E0;
+            --shadow-sm: 0 2px 8px rgba(217, 68, 13, 0.12);
+            --shadow-md: 0 8px 24px rgba(217, 68, 13, 0.18);
+            --shadow-lg: 0 20px 60px rgba(217, 68, 13, 0.25);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --accent-green: #22C55E;
+            --accent-gold: #FFD700;
+        }
+
+        :root.dark-mode {
+            --bg-light: #0A1428;
+            --bg-light-secondary: #1A2847;
+            --text-dark: #FFFFFF;
+            --text-gray: #E0E8F5;
+            --text-muted: #A0B0D0;
+            --border-light: #3A5080;
+            --shadow-sm: 0 2px 8px rgba(217, 68, 13, 0.15);
+            --shadow-md: 0 8px 24px rgba(217, 68, 13, 0.25);
+            --shadow-lg: 0 20px 60px rgba(217, 68, 13, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-light-secondary) 100%);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ====== HEADER ====== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .header {
+            background: rgba(10, 20, 40, 0.95);
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-img {
+            height: 100px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+
+        .dark-mode .logo-img {
+            filter: brightness(0) invert(1);
+        }
+
+        .dark-mode .logo-section:hover .logo-img {
+            filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(217, 68, 13, 0.5));
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 70px;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dark-mode .nav-links a {
+            color: #E8EEF8;
+            font-weight: 500;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .dark-mode .nav-links a:hover,
+        .dark-mode .nav-links a.active {
+            color: #FF8A55;
+            background: rgba(217, 68, 13, 0.15);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 80%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lang-btn {
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, #D9440D, #E8551E);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, #C13A0A, #D9440D);
+        }
+
+        .btn-primary {
+            padding: 0.65rem 1.5rem;
+            background: linear-gradient(135deg, #D9440D, #E8551E);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, #C13A0A, #D9440D);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            padding: 0.65rem 1.5rem;
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .theme-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            background: var(--bg-light);
+            color: var(--text-gray);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .dark-mode .theme-btn {
+            background: var(--bg-light-secondary);
+            color: #E0E8F5;
+            border-color: var(--border-light);
+        }
+
+        .theme-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(217, 68, 13, 0.08);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: 2px solid var(--border-light);
+            color: var(--text-dark);
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0.8rem 1rem;
+            }
+
+            .btn-primary.desktop-only {
+                display: none;
+            }
+        }
+
+        /* ====== HERO ====== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 7rem 2rem 5rem;
+            background: linear-gradient(135deg, #C13A0A 0%, #D9440D 50%, #E8551E 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: floatOrb 15s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(217, 68, 13, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: floatOrb 18s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatOrb {
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+            }
+            50% {
+                transform: translateY(-30px) translateX(20px);
+            }
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 50px;
+            padding: 0.6rem 1.3rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 480px;
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(20px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-stat span {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            padding: 0.65rem 1.5rem;
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-visual {
+                display: none;
+            }
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            height: 480px;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid white;
+            animation: floatImg 6s ease-in-out infinite;
+        }
+
+        @keyframes floatImg {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* ====== SECTION BASE ====== */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(217, 68, 13, 0.15);
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .dark-mode .section-title {
+            color: #FFFFFF;
+        }
+
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .dark-mode .section-sub {
+            color: #D0D8E8;
+        }
+
+        .section-head {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-head.center {
+            text-align: center;
+        }
+
+        .section-head.center .section-sub {
+            margin: 0 auto;
+        }
+
+        .section-head .section-tag {
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+
+        .section-head.center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ====== ABOUT ====== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            height: 450px;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--primary);
+        }
+
+        .check-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* ====== SUBSIDY BANNER ====== */
+        .subsidy-banner {
+            background: linear-gradient(135deg, #D9440D 0%, #C13A0A 100%);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .subsidy-banner .subsidy-icon {
+            font-size: 3rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .subsidy-banner .subsidy-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .subsidy-banner .subsidy-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .subsidy-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ====== SUBSIDY TABLE ====== */
+        .subsidy-table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .subsidy-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-light);
+        }
+
+        .subsidy-table thead {
+            background: linear-gradient(135deg, #D9440D, #C13A0A);
+            color: white;
+        }
+
+        .subsidy-table th {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .subsidy-table td {
+            padding: 0.9rem 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .subsidy-table tbody tr:hover {
+            background: rgba(217, 68, 13, 0.05);
+        }
+
+        .subsidy-table .highlight-row {
+            background: rgba(217, 68, 13, 0.08);
+            font-weight: 600;
+        }
+
+        /* ====== DEALER SECTION ====== */
+        .dealer-section {
+            background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light) 100%);
+        }
+
+        .dealer-logos {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            padding: 2rem 0;
+            align-items: start;
+        }
+
+        @media (max-width: 1200px) {
+            .dealer-logos {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dealer-logos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dealer-logos {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .dealer-logo-item {
+            background: var(--bg-light);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .dealer-logo-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.03), var(--bg-light));
+        }
+
+        .dark-mode .dealer-logo-item {
+            background: var(--bg-light-secondary);
+            border-color: var(--border-light);
+        }
+
+        .dark-mode .dealer-logo-item:hover {
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.1), var(--bg-light-secondary));
+            border-color: var(--primary);
+        }
+
+        .dealer-img {
+            width: 140px;
+            height: 80px;
+            object-fit: contain;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .dealer-logo-item:hover .dealer-img {
+            transform: scale(1.05);
+        }
+
+        .dark-mode .dealer-img {
+            filter: brightness(0.9);
+        }
+
+        .dark-mode .dealer-logo-item:hover .dealer-img {
+            filter: brightness(1);
+        }
+
+        .dealer-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .dark-mode .dealer-name {
+            color: #E0E8F5;
+        }
+
+        /* ====== SERVICES ====== */
+        .services-section {
+            background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #C13A0A, #E8551E);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.15), rgba(232, 85, 30, 0.1));
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.25), rgba(232, 85, 30, 0.2));
+        }
+
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .feature-list li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 500;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .service-footer {
+            margin-top: auto;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .price-tag {
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.1), rgba(232, 85, 30, 0.08));
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 0.35rem 0.85rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* Four Step Process */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .step-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D9440D, #E8551E);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin: 0 auto 1rem;
+        }
+
+        .step-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ====== BENEFITS ====== */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-light-secondary) 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .benefit-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.25rem;
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.15), rgba(232, 85, 30, 0.1));
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.15);
+            background: linear-gradient(135deg, rgba(217, 68, 13, 0.25), rgba(232, 85, 30, 0.2));
+        }
+
+        .benefit-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* ====== RATINGS ====== */
+        .ratings-bar {
+            background: linear-gradient(135deg, #C13A0A, #D9440D);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .ratings-bar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .ratings-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 1024px) {
+            .ratings-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .rating-big {
+            text-align: center;
+        }
+
+        .rating-big .num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .rating-big .stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+            font-size: 1.8rem;
+            color: #FFD700;
+        }
+
+        .rating-big .count {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* ====== CTA SECTION ====== */
+        .cta-section {
+            background: linear-gradient(135deg, #C13A0A, #D9440D);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            margin: 4rem 2rem;
+            color: white;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: floatOrb 15s ease-in-out infinite;
+        }
+
+        .cta-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-inner h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-inner p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .quick-form {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-form-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) auto;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .quick-form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .quick-form input {
+            padding: 0.8rem 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            width: 100%;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .quick-form input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .quick-form input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-white {
+            background: white;
+            color: #D9440D;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: #FFF5F0;
+        }
+
+        /* ====== REVIEWS ====== */
+        .reviews-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-light-secondary) 100%);
+        }
+
+        .reviews-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .review-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #C13A0A, #E8551E);
+        }
+
+        .reviewer-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .reviewer-info .meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 0.3rem;
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .review-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .review-service {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(217, 68, 13, 0.15);
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 0.3rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ====== MODAL STYLES ====== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary);
+        }
+
+        .modal h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(217, 68, 13, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .star-picker {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .star-picker button {
+            background: none;
+            border: none;
+            font-size: 2.5rem;
+            color: #DDD;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 0;
+        }
+
+        .star-picker button:hover,
+        .star-picker button.active {
+            color: #FFD700;
+            transform: scale(1.2);
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+            background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light) 100%);
+            color: var(--text-gray);
+            padding: 4rem 2rem 2rem;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(217, 68, 13, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        footer h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        footer ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer ul li a:hover {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .contact-item a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-light);
+            padding-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* ====== FLOATING BUTTONS ====== */
+        .float-wa {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 99;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            animation: pulse 3s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .float-wa:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .back-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 98;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .back-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .float-wa {
+                width: 54px;
+                height: 54px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="mainHeader">
+        <div class="header-inner">
+            <a href="#home" class="logo-section">
+                <img src="SUNPRO LOGO UPSCALED NO BG.png" alt="SunPro Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link" data-en="Home" data-te="హోమ్">Home</a>
+                <a href="#about" class="nav-link" data-en="About" data-te="మా గురించి">About</a>
+                <a href="#services" class="nav-link" data-en="Services" data-te="సేవలు">Services</a>
+                <a href="#subsidy" class="nav-link" data-en="Subsidy" data-te="సబ్సిడీ">Subsidy</a>
+                <a href="#dealers" class="nav-link" data-en="Dealers" data-te="డీలర్లు">Dealers</a>
+                <a href="#reviews" class="nav-link" data-en="Reviews" data-te="సమీక్షలు">Reviews</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-te="సంప్రదించండి">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="lang-btn" id="langBtn" onclick="toggleLanguage()" title="Toggle Language">
+                    <span id="langText">🌐 తెలుగు</span>
+                </button>
+                <button class="theme-btn" id="themeBtn" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-primary desktop-only" onclick="openModal('quoteModal')">Get Quote</button>
+                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    <span data-en="MNRE Approved • India's #1 Rated Solar Provider"
+                        data-te="MNRE ఆమోదించిన • భారతదేశంలో #1 రేటెడ్ సోలార్ ప్రొవైడర్">
+                        MNRE Approved • India's #1 Rated Solar Provider
+                    </span>
+                </div>
+
+                <h1>
+                    <span data-en="Switch to Solar & Save Heavily on Electricity Bills!"
+                        data-te="సోలార్‌కు మారండి & విద్యుత్ బిల్లులపై భారీగా ఆదా చేసుకోండి!">
+                        Switch to Solar & Save Heavily on Electricity Bills!
+                    </span>
+                </h1>
+
+                <p data-en="MNRE Rooftop Solar Scheme available! Central Govt subsidy up to ₹78,000. Limited time offer - Book now! Join 1000+ satisfied customers across India."
+                    data-te="MNRE రూఫ్‌టాప్ సోలార్ పథకం అందుబాటులో ఉంది! కేంద్ర ప్రభుత్వ సబ్సిడీ రూ.78,000 వరకు. పరిమిత కాల ఆఫర్ - ఇప్పుడే బుక్ చేయండి! భారతదేశం అంతటా 1000+ సంతృప్తి చెందిన వినియోగదారులతో చేరండి.">
+                    MNRE Rooftop Solar Scheme available! Central Govt subsidy up to ₹78,000. Limited time offer - Book
+                    now! Join 1000+ satisfied customers across India.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>₹78,000</strong>
+                        <span data-en="Max Govt Subsidy" data-te="గరిష్ట ప్రభుత్వ సబ్సిడీ">Max Govt Subsidy</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>1K+</strong>
+                        <span data-en="Happy Customers" data-te="సంతుష్ట వినియోగదారులు">Happy Customers</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>0.5 MW+</strong>
+                        <span data-en="Installation Exp" data-te="ఇన్‌స్టాలేషన్ అనుభవం">Installation Exp</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>30 Yrs</strong>
+                        <span data-en="Panel Warranty" data-te="ప్యానెల్ వారంటీ">Panel Warranty</span>
+                    </div>
+                </div>
+
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="openModal('quoteModal')">
+                        <i class="fas fa-file-alt"></i> <span data-en="Get Free Quote" data-te="ఉచిత కోట్ పొందండి">Get
+                            Free Quote</span>
+                    </button>
+                    <button class="btn-secondary"
+                        onclick="document.getElementById('subsidy').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-arrow-right"></i> <span data-en="Check Subsidy"
+                            data-te="సబ్సిడీని తనిఖీ చేయండి">Check
+                            Subsidy</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Solar Panels Installation" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSIDY HIGHLIGHT BANNER -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="section-inner">
+            <div class="subsidy-banner">
+                <div class="subsidy-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="subsidy-content">
+                    <h3 data-en="MNRE Rooftop Solar Scheme - Central Government Subsidy"
+                        data-te="MNRE రూఫ్‌టాప్ సోలార్ పథకం - కేంద్ర ప్రభుత్వ సబ్సిడీ">
+                        MNRE Rooftop Solar Scheme - Central Government Subsidy
+                    </h3>
+                    <div class="subsidy-amount" data-en="Up to ₹78,000 Subsidy Available!"
+                        data-te="రూ. 78,000 వరకు సబ్సిడీ అందుబాటులో!">
+                        Up to ₹78,000 Subsidy Available!
+                    </div>
+                    <p data-en="Limited time offer under Ministry of New & Renewable Energy scheme. Book your installation now to avail maximum benefits."
+                        data-te="Ministry of New & Renewable Energy పథకం కింద పరిమిత కాల ఆఫర్. గరిష్ట ప్రయోజనాలను పొందడానికి ఇప్పుడే మీ ఇన్‌స్టాలేషన్ బుక్ చేయండి.">
+                        Limited time offer under Ministry of New & Renewable Energy scheme. Book your installation now
+                        to
+                        avail maximum benefits.
+                    </p>
+                    <button class="btn-primary" style="margin-top: 1rem;" onclick="openModal('quoteModal')">
+                        <i class="fas fa-check-circle"></i> <span data-en="Claim Your Subsidy Now"
+                            data-te="మీ సబ్సిడీని ఇప్పుడే క్లెయిమ్ చేయండి">Claim Your Subsidy Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div>
+                    <div class="section-tag">
+                        <i class="fas fa-info-circle"></i> <span data-en="About Us" data-te="మా గురించి">About Us</span>
+                    </div>
+                    <h2 class="section-title" data-en="Leading India's Solar Revolution with Proven Expertise"
+                        data-te="నిరూపిత నైపుణ్యంతో భారతదేశ సోలార్ విప్లవాన్ని నడిపిస్తున్నాం">
+                        Leading India's Solar Revolution with Proven Expertise
+                    </h2>
+                    <p class="section-sub" style="margin-bottom: 1.5rem;"
+                        data-en="At SunPro Energies, we make solar power simple and affordable. With 0.5 MW+ installation experience and an experienced engineering team, we deliver end-to-end solar solutions with zero down payment options. Bank loans available in all nationalised banks."
+                        data-te="SunPro Energies లో, మేము సోలార్ పవర్‌ను సులభం మరియు సరసమైనదిగా చేస్తున్నాము. 0.5 MW+ ఇన్‌స్టాలేషన్ అనుభవం మరియు అనుభవజ్ఞులైన ఇంజనీరింగ్ టీమ్‌తో, మేము జీరో డౌన్ పేమెంట్ ఎంపికలతో సంపూర్ణ సోలార్ సొల్యూషన్‌లను అందిస్తున్నాము. అన్ని జాతీయ బ్యాంకులలో బ్యాంక్ లోన్‌లు అందుబాటులో ఉన్నాయి.">
+                        At SunPro Energies, we make solar power simple and affordable. With 0.5 MW+ installation
+                        experience and an experienced engineering team, we deliver end-to-end solar solutions with zero
+                        down payment options. Bank loans available in all nationalised banks.
+                    </p>
+
+                    <ul class="check-list">
+                        <li data-en="0.5 MW+ Solar Installation Experience"
+                            data-te="0.5 MW+ సోలార్ ఇన్‌స్టాలేషన్ అనుభవం">
+                            0.5 MW+ Solar Installation Experience</li>
+                        <li data-en="1000+ Successful Installations" data-te="1000+ విజయవంతమైన ఇన్‌స్టాలేషన్‌లు">1000+
+                            Successful Installations</li>
+                        <li data-en="ISO 9001:2015 Certified Company" data-te="ISO 9001:2015 సర్టిఫైడ్ కంపెనీ">ISO
+                            9001:2015 Certified Company</li>
+                        <li data-en="Government-Approved MNRE Vendor" data-te="ప్రభుత్వ-ఆమోదిత MNRE విక్రేత">
+                            Government-Approved MNRE Vendor</li>
+                        <li data-en="Bank Loans Available (All Nationalised Banks)"
+                            data-te="బ్యాంక్ లోన్‌లు అందుబాటులో (అన్ని జాతీయ బ్యాంకులు)">
+                            Bank Loans Available (All Nationalised Banks)</li>
+                        <li data-en="Zero Down Payment Options Available"
+                            data-te="జీరో డౌన్ పేమెంట్ ఎంపికలు అందుబాటులో">
+                            Zero Down Payment Options Available</li>
+                    </ul>
+
+                    <button class="btn-primary" onclick="openModal('quoteModal')">
+                        <i class="fas fa-calendar-check"></i> <span data-en="Schedule Free Consultation"
+                            data-te="ఉచిత సంప్రదింపు షెడ్యూల్ చేయండి">Schedule Free Consultation</span>
+                    </button>
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Solar Installation Team at Work" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-STEP PROCESS SECTION -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light) 100%);">
+        <div class="section-inner">
+            <div class="section-head center">
+                <div class="section-tag">
+                    <i class="fas fa-cogs"></i> <span data-en="Our Process" data-te="మా ప్రక్రియ">Our Process</span>
+                </div>
+                <h2 class="section-title" data-en="Easy 4-Step Installation Process"
+                    data-te="4 సులభమైన దశల్లో ఇన్‌స్టాలేషన్">
+                    Easy 4-Step Installation Process
+                </h2>
+                <p class="section-sub" data-en="Simple and hassle-free solar installation in just 4 steps"
+                    data-te="కేవలం 4 సులభమైన దశల్లో సరళమైన మరియు ఝామీన్-రహిత సోలార్ ఇన్‌స్టాలేషన్">
+                    Simple and hassle-free solar installation in just 4 steps
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4 data-en="Site Survey" data-te="సైట్ సర్వే">Site Survey</h4>
+                    <p data-en="Our expert team visits your location for a thorough site assessment and feasibility study."
+                        data-te="మా నిపుణుల బృందం సమగ్ర సైట్ అసెస్‌మెంట్ మరియు ఫీజిబిలిటీ స్టడీ కోసం మీ ప్రదేశాన్ని సందర్శిస్తుంది.">
+                        Our expert team visits your location for a thorough site assessment and feasibility study.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4 data-en="Design & Approval" data-te="డిజైన్ & ఆమోదం">Design & Approval</h4>
+                    <p data-en="Custom system design with necessary government and DISCOM approvals processed."
+                        data-te="అవసరమైన ప్రభుత్వ మరియు DISCOM ఆమోదాలతో కస్టమ్ సిస్టమ్ డిజైన్.">
+                        Custom system design with necessary government and DISCOM approvals processed.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4 data-en="Installation" data-te="ఇన్‌స్టాలేషన్">Installation</h4>
+                    <p data-en="Professional installation by our experienced engineering team with safety standards."
+                        data-te="భద్రతా ప్రమాణాలతో మా అనుభవజ్ఞులైన ఇంజనీరింగ్ టీమ్ ద్వారా ప్రొఫెషనల్ ఇన్‌స్టాలేషన్.">
+                        Professional installation by our experienced engineering team with safety standards.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4 data-en="Net Metering & Commissioning" data-te="నెట్ మీటరింగ్ & కమిషనింగ్">Net Metering &
+                        Commissioning</h4>
+                    <p data-en="Complete net metering setup and system commissioning for immediate power generation."
+                        data-te="తక్షణ విద్యుత్ ఉత్పత్తి కోసం పూర్తి నెట్ మీటరింగ్ సెటప్ మరియు సిస్టమ్ కమిషనింగ్.">
+                        Complete net metering setup and system commissioning for immediate power generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSIDY TABLE SECTION -->
+    <section id="subsidy" class="section">
+        <div class="section-inner">
+            <div class="section-head center">
+                <div class="section-tag">
+                    <i class="fas fa-rupee-sign"></i> <span data-en="Subsidy Details" data-te="సబ్సిడీ వివరాలు">Subsidy
+                        Details</span>
+                </div>
+                <h2 class="section-title" data-en="RTS System Capacity & Subsidy Chart"
+                    data-te="RTS సిస్టమ్ కెపాసిటీ & సబ్సిడీ చార్ట్">
+                    RTS System Capacity & Subsidy Chart
+                </h2>
+                <p class="section-sub" data-en="Check your eligible subsidy amount based on system capacity"
+                    data-te="సిస్టమ్ కెపాసిటీ ఆధారంగా మీ అర్హత గల సబ్సిడీ మొత్తాన్ని తనిఖీ చేయండి">
+                    Check your eligible subsidy amount based on system capacity
+                </p>
+            </div>
+
+            <div class="subsidy-table-wrapper">
+                <table class="subsidy-table">
+                    <thead>
+                        <tr>
+                            <th data-en="System Capacity" data-te="సిస్టమ్ కెపాసిటీ">System Capacity</th>
+                            <th data-en="Subsidy Amount (₹)" data-te="సబ్సిడీ మొత్తం (₹)">Subsidy Amount (₹)</th>
+                            <th data-en="Space Required (Sq.Ft)" data-te="అవసరమైన స్థలం (చ.అ.)">Space Required
+                                (Sq.Ft)</th>
+                            <th data-en="Units Generated/Month" data-te="యూనిట్లు ఉత్పత్తి/నెల">Units
+                                Generated/Month</th>
+                            <th data-en="Action" data-te="చర్య">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹60,000</strong></td>
+                            <td>200</td>
+                            <td>240</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>300</td>
+                            <td>360</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>4 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>400</td>
+                            <td>480</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>500</td>
+                            <td>600</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>600</td>
+                            <td>720</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>7 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>700</td>
+                            <td>840</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>8 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>800</td>
+                            <td>960</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>9 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>900</td>
+                            <td>1080</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>10 KW</strong></td>
+                            <td><strong style="color: var(--accent-green);">₹78,000</strong></td>
+                            <td>1000</td>
+                            <td>1200</td>
+                            <td><button class="btn-outline" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;"
+                                    onclick="openModal('quoteModal')">Book Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;"
+                data-en="* Subsidy amounts as per MNRE guidelines. Subject to eligibility and scheme availability."
+                data-te="* MNRE మార్గదర్శకాల ప్రకారం సబ్సిడీ మొత్తాలు. అర్హత మరియు పథకం లభ్యతకు లోబడి.">
+                * Subsidy amounts as per MNRE guidelines. Subject to eligibility and scheme availability.
+            </p>
+        </div>
+    </section>
+
+    <!-- DEALER SECTION -->
+    <section id="dealers" class="section dealer-section">
+        <div class="section-inner">
+            <div class="section-head center">
+                <div class="section-tag">
+                    <i class="fas fa-handshake"></i> <span data-en="Our Dealers" data-te="మా డీలర్లు">Our Dealers</span>
+                </div>
+                <h2 class="section-title" data-en="Authorized Solar PV Module Dealers"
+                    data-te="అధీకృత సోలార్ PV మాడ్యూల్ డీలర్లు">
+                    Authorized Solar PV Module Dealers
+                </h2>
+                <p class="section-sub"
+                    data-en="We are authorized dealers for the world's leading solar PV module manufacturers"
+                    data-te="మేము ప్రపంచంలోని ప్రముఖ సోలార్ PV మాడ్యూల్ తయారీదారులకు అధీకృత డీలర్లము">
+                    We are authorized dealers for the world's leading solar PV module manufacturers
+                </p>
+            </div>
+
+            <div class="dealer-logos">
+                <div class="dealer-logo-item">
+                    <img src="LUMINOUS SOLAR.png" alt="Luminous Solar" class="dealer-img">
+                </div>
+                <div class="dealer-logo-item">
+                    <img src="ADANI SOLAR.png" alt="Adani Solar" class="dealer-img">
+                </div>
+                <div class="dealer-logo-item">
+                    <img src="WAAREE.png" alt="Waaree Energies" class="dealer-img">
+                </div>
+                <div class="dealer-logo-item">
+                    <img src="RENEW POWER.png" alt="Renew Power" class="dealer-img">
+                </div>
+                <div class="dealer-logo-item">
+                    <img src="TATA POWER SOLAR ROOF.png" alt="Tata Power Solar" class="dealer-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section services-section">
+        <div class="section-inner">
+            <div class="section-head center">
+                <div class="section-tag">
+                    <i class="fas fa-bolt"></i> <span data-en="Our Services" data-te="మా సేవలు">Our Services</span>
+                </div>
+                <h2 class="section-title" data-en="Comprehensive Solar Solutions" data-te="సమగ్ర సోలార్ సొల్యూషన్లు">
+                    Comprehensive Solar Solutions</h2>
+                <p class="section-sub"
+                    data-en="Tailored solar energy systems for residential, commercial, and industrial needs with bank financing available"
+                    data-te="బ్యాంక్ ఫైనాన్సింగ్ అందుబాటులో ఉన్న నివాస, వాణిజ్య మరియు పారిశ్రామిక అవసరాలకు అనుకూలించిన సోలార్ ఎనర్జీ సిస్టమ్‌లు">
+                    Tailored solar energy systems for residential, commercial, and industrial needs with bank financing
+                    available
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-en="Residential Solar" data-te="నివాస సోలార్">Residential Solar</h3>
+                    <p data-en="Complete rooftop solutions with smart monitoring and battery backup. Save up to 100% on electricity bills!"
+                        data-te="స్మార్ట్ మానిటరింగ్ మరియు బ్యాటరీ బ్యాకప్‌తో పూర్తి రూఫ్‌టాప్ సొల్యూషన్‌లు. విద్యుత్ బిల్లులపై 100% వరకు ఆదా చేయండి!">
+                        Complete rooftop solutions with smart monitoring and battery backup. Save up to 100% on
+                        electricity bills!
+                    </p>
+                    <ul class="feature-list">
+                        <li data-en="Custom Designed Systems" data-te="కస్టమ్ డిజైన్ సిస్టమ్స్">Custom Designed Systems
+                        </li>
+                        <li data-en="Govt Subsidy up to ₹78,000" data-te="ప్రభుత్వ సబ్సిడీ ₹78,000 వరకు">Govt Subsidy up
+                            to ₹78,000</li>
+                        <li data-en="Net Metering Setup" data-te="నెట్ మీటరింగ్ సెటప్">Net Metering Setup</li>
+                        <li data-en="5 Years AMC Support" data-te="5 సంవత్సరాల AMC మద్దతు">5 Years AMC Support</li>
+                    </ul>
+                    <div class="service-footer">
+                        <button class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 1rem;"
+                            onclick="openModal('quoteModal')">
+                            <span data-en="Get Quote" data-te="కోట్ పొందండి">Get Quote</span> →
+                        </button>
+                        <span class="price-tag" data-en="Subsidy: ₹60K-78K" data-te="సబ్సిడీ: ₹60K-78K">Subsidy:
+                            ₹60K-78K</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 data-en="Commercial Solar" data-te="వాణిజ్య సోలార్">Commercial Solar</h3>
+                    <p data-en="Large-scale installations for businesses with attractive ROI, energy audits, and tax benefits guidance."
+                        data-te="ఆకర్షణీయమైన ROI, ఎనర్జీ ఆడిట్‌లు మరియు పన్ను ప్రయోజనాల మార్గదర్శకత్వంతో వ్యాపారాల కోసం పెద్ద-స్థాయి ఇన్‌స్టాలేషన్‌లు.">
+                        Large-scale installations for businesses with attractive ROI, energy audits, and tax benefits
+                        guidance.
+                    </p>
+                    <ul class="feature-list">
+                        <li data-en="High-Efficiency Panels" data-te="అధిక-సమర్థత ప్యానెల్‌లు">High-Efficiency Panels
+                        </li>
+                        <li data-en="Energy Audit & Planning" data-te="ఎనర్జీ ఆడిట్ & ప్లానింగ్">Energy Audit & Planning
+                        </li>
+                        <li data-en="Tax Benefits Guidance" data-te="పన్ను ప్రయోజనాల మార్గదర్శకత్వం">Tax Benefits
+                            Guidance</li>
+                        <li data-en="24/7 Performance Monitoring" data-te="24/7 పనితీరు మానిటరింగ్">24/7 Performance
+                            Monitoring</li>
+                    </ul>
+                    <div class="service-footer">
+                        <button class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 1rem;"
+                            onclick="openModal('quoteModal')">
+                            <span data-en="Get Quote" data-te="కోట్ పొందండి">Get Quote</span> →
+                        </button>
+                        <span class="price-tag" data-en="From ₹10L" data-te="₹10L నుండి">From ₹10L</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 data-en="Industrial Solar" data-te="పారిశ్రామిక సోలార్">Industrial Solar</h3>
+                    <p data-en="Heavy-duty systems for factories with maximum uptime, scalable solutions, and emergency support."
+                        data-te="గరిష్ట అప్‌టైమ్, స్కేలేబుల్ సొల్యూషన్‌లు మరియు అత్యవసర మద్దతుతో కర్మాగారాల కోసం భారీ-డ్యూటీ సిస్టమ్‌లు.">
+                        Heavy-duty systems for factories with maximum uptime, scalable solutions, and emergency support.
+                    </p>
+                    <ul class="feature-list">
+                        <li data-en="Scalable MW Systems" data-te="స్కేలేబుల్ MW సిస్టమ్స్">Scalable MW Systems</li>
+                        <li data-en="24/7 Remote Monitoring" data-te="24/7 రిమోట్ మానిటరింగ్">24/7 Remote Monitoring
+                        </li>
+                        <li data-en="Emergency Support" data-te="అత్యవసర మద్దతు">Emergency Support</li>
+                        <li data-en="Performance Optimization" data-te="పనితీరు ఆప్టిమైజేషన్">Performance Optimization
+                        </li>
+                    </ul>
+                    <div class="service-footer">
+                        <button class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 1rem;"
+                            onclick="openModal('quoteModal')">
+                            <span data-en="Get Quote" data-te="కోట్ పొందండి">Get Quote</span> →
+                        </button>
+                        <span class="price-tag" data-en="From ₹25L" data-te="₹25L నుండి">From ₹25L</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="section benefits-section">
+        <div class="section-inner">
+            <div class="section-head center">
+                <div class="section-tag">
+                    <i class="fas fa-star"></i> <span data-en="Why Solar" data-te="సోలార్ ఎందుకు">Why Solar</span>
+                </div>
+                <h2 class="section-title" data-en="Why Install Solar Panels?"
+                    data-te="సోలార్ ప్యానెల్‌లు ఎందుకు పెట్టాలి?">
+                    Why Install Solar Panels?</h2>
+                <p class="section-sub"
+                    data-en="Discover the advantages of switching to clean, renewable energy with SunPro"
+                    data-te="SunPro తో క్లీన్, రెన్యూవబుల్ ఎనర్జీకి మారడం వల్ల కలిగే ప్రయోజనాలను కనుగొనండి">
+                    Discover the advantages of switching to clean, renewable energy with SunPro
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3 data-en="Save Up to 100% on Bills" data-te="బిల్లులపై 100% వరకు ఆదా">Save Up to 100% on Bills
+                    </h3>
+                    <p data-en="Reduce electricity bills by up to 100% and get payback in 3-5 years with government subsidies."
+                        data-te="విద్యుత్ బిల్లులను 100% వరకు తగ్గించుకోండి మరియు ప్రభుత్వ సబ్సిడీలతో 3-5 సంవత్సరాలలో తిరిగి చెల్లించండి.">
+                        Reduce electricity bills by up to 100% and get payback in 3-5 years with government subsidies.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="30 Years Panel Warranty" data-te="30 సంవత్సరాల ప్యానెల్ వారంటీ">30 Years Panel
+                        Warranty</h3>
+                    <p data-en="Industry-leading 30-year panel performance warranty and 5-year AMC support included."
+                        data-te="ఇండస్ట్రీ-లీడింగ్ 30-సంవత్సరాల ప్యానెల్ పనితీరు వారంటీ మరియు 5-సంవత్సరాల AMC మద్దతు చేర్చబడింది.">
+                        Industry-leading 30-year panel performance warranty and 5-year AMC support included.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-en="Increases Property Value" data-te="ఆస్తి విలువ పెరుగుతుంది">Increases Property Value
+                    </h3>
+                    <p data-en="Solar installation significantly increases your property's market value for future resale."
+                        data-te="సోలార్ ఇన్‌స్టాలేషన్ భవిష్యత్తు పునర్విక్రయానికి మీ ఆస్తి మార్కెట్ విలువను గణనీయంగా పెంచుతుంది.">
+                        Solar installation significantly increases your property's market value for future resale.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-en="Environmentally Friendly" data-te="పర్యావరణానికి అనుకూలమైనది">Environmentally Friendly
+                    </h3>
+                    <p data-en="Reduce carbon footprint and contribute to a cleaner, greener planet for future generations."
+                        data-te="కార్బన్ ఫుట్‌ప్రింట్‌ను తగ్గించండి మరియు భవిష్యత్ తరాల కోసం పరిశుభ్రమైన, పచ్చని గ్రహానికి సహాయం చేయండి.">
+                        Reduce carbon footprint and contribute to a cleaner, greener planet for future generations.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 data-en="Bank Loans Available" data-te="బ్యాంక్ లోన్‌లు అందుబాటులో">Bank Loans Available</h3>
+                    <p data-en="Easy financing through all nationalised banks with attractive interest rates and zero down payment options."
+                        data-te="ఆకర్షణీయమైన వడ్డీ రేట్లు మరియు జీరో డౌన్ పేమెంట్ ఎంపికలతో అన్ని జాతీయ బ్యాంకుల ద్వారా సులభమైన ఫైనాన్సింగ్.">
+                        Easy financing through all nationalised banks with attractive interest rates and zero down
+                        payment
+                        options.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 data-en="Year-Round Generation" data-te="సంవత్సరమంతా ఉత్పత్తి">Year-Round Generation</h3>
+                    <p data-en="Consistent electricity generation throughout the year with reliable savings every month."
+                        data-te="ప్రతి నెల నమ్మకమైన పొదుపుతో సంవత్సరమంతా స్థిరమైన విద్యుత్ ఉత్పత్తి.">
+                        Consistent electricity generation throughout the year with reliable savings every month.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RATINGS SECTION -->
+    <div class="ratings-bar">
+        <div class="ratings-inner">
+            <div class="rating-big">
+                <div class="num">4.9</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="count" data-en="Based on 847+ Customer Reviews" data-te="847+ కస్టమర్ సమీక్షల ఆధారంగా">Based
+                    on 847+ Customer Reviews</div>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="font-family: 'Space Grotesk'; font-size: 1.3rem; margin-bottom: 1.5rem; color: white; font-weight: 700;"
+                    data-en="Customer Satisfaction Stats" data-te="కస్టమర్ సంతృప్తి గణాంకాలు">Customer Satisfaction
+                    Stats</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #FFD700; font-family: 'Space Grotesk';">
+                            98%</div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem;"
+                            data-en="Would Recommend" data-te="సిఫారసు చేస్తారు">Would Recommend</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #FFD700; font-family: 'Space Grotesk';">
+                            96%</div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem;"
+                            data-en="On-Time Delivery" data-te="సమయానికి డెలివరీ">On-Time Delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="section reviews-section">
+        <div class="section-inner">
+            <div class="reviews-controls">
+                <div>
+                    <div class="section-tag">
+                        <i class="fas fa-comments"></i> <span data-en="Reviews" data-te="సమీక్షలు">Reviews</span>
+                    </div>
+                    <h2 class="section-title" style="font-size: 1.75rem;" data-en="What Our Customers Say"
+                        data-te="మా కస్టమర్లు ఏమి చెప్తున్నారు">What Our Customers Say</h2>
+                </div>
+                <button class="btn-primary" onclick="openModal('reviewModal')">
+                    <i class="fas fa-pen"></i> <span data-en="Write a Review" data-te="సమీక్ష రాయండి">Write a
+                        Review</span>
+                </button>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Static Reviews -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">RS</div>
+                        <div class="reviewer-info">
+                            <h4>Rajesh Sharma</h4>
+                            <div class="meta">Hyderabad • 10kW System</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Professional team, timely installation, and excellent after-sales support.
+                        Our factory electricity bill reduced by 85%! Highly recommend SunPro."</p>
+                    <div class="review-meta">
+                        <span class="review-service"><i class="fas fa-building"></i> Commercial</span>
+                        <span style="color: var(--accent-green); font-weight: 600;">₹3.2L annual savings</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">PP</div>
+                        <div class="reviewer-info">
+                            <h4>Priya Patel</h4>
+                            <div class="meta">Visakhapatnam • 5kW System</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Excellent service from start to finish. The team helped us get subsidies and
+                        completed installation in 3 days. Got ₹78,000 subsidy. Highly recommended!"</p>
+                    <div class="review-meta">
+                        <span class="review-service"><i class="fas fa-home"></i> Residential</span>
+                        <span style="color: var(--accent-green); font-weight: 600;">₹65K annual savings</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SR</div>
+                        <div class="reviewer-info">
+                            <h4>Suresh Reddy</h4>
+                            <div class="meta">Bangalore • 15kW System</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Smart monitoring system shows real-time data. Already recovered 40% of
+                        investment in 2 years. Zero down payment made it easy. Best decision ever!"</p>
+                    <div class="review-meta">
+                        <span class="review-service"><i class="fas fa-industry"></i> Industrial</span>
+                        <span style="color: var(--accent-green); font-weight: 600;">₹4.8L annual savings</span>
+                    </div>
+                </div>
+            </div>
+            <div id="userReviewsContainer" style="margin-top: 2rem;"></div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section">
+        <div class="cta-section">
+            <div class="cta-inner">
+                <h2 data-en="Ready to Start Saving? Zero Down Payment Available!"
+                    data-te="పొదుపు ప్రారంభించడానికి సిద్ధంగా ఉన్నారా? జీరో డౌన్ పేమెంట్ అందుబాటులో!">
+                    Ready to Start Saving? Zero Down Payment Available!
+                </h2>
+                <p data-en="Get a free site survey and customized solar proposal within 24 hours. Bank loans available in all nationalised banks. Join India's clean energy revolution today!"
+                    data-te="24 గంటలలో ఉచిత సైట్ సర్వే మరియు కస్టమైజ్డ్ సోలార్ ప్రతిపాదన పొందండి. అన్ని జాతీయ బ్యాంకులలో బ్యాంక్ లోన్‌లు అందుబాటులో ఉన్నాయి. ఈరోజు భారతదేశ క్లీన్ ఎనర్జీ విప్లవంలో చేరండి!">
+                    Get a free site survey and customized solar proposal within 24 hours. Bank loans available in all
+                    nationalised banks. Join India's clean energy revolution today!
+                </p>
+
+                <div class="quick-form">
+                    <div class="quick-form-row">
+                        <input type="text" id="ctaName" placeholder="Your Name" data-en-placeholder="Your Name"
+                            data-te-placeholder="మీ పేరు">
+                        <input type="tel" id="ctaPhone" placeholder="Phone Number" data-en-placeholder="Phone Number"
+                            data-te-placeholder="ఫోన్ నంబర్">
+                        <input type="text" id="ctaCity" placeholder="City" data-en-placeholder="City"
+                            data-te-placeholder="నగరం">
+                        <button class="btn-white" onclick="submitCTA()" data-en="Get Quote" data-te="కోట్ పొందండి">Get
+                            Quote</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="tel:+919381241664" class="btn-primary">
+                        <i class="fas fa-phone"></i> <span data-en="Call Now: 9381241664"
+                            data-te="ఇప్పుడు కాల్ చేయండి: 9381241664">Call Now: 9381241664</span>
+                    </a>
+                    <a href="https://wa.me/919381241664" target="_blank" class="btn-primary"
+                        style="background: #25D366;">
+                        <i class="fab fa-whatsapp"></i> <span data-en="WhatsApp" data-te="వాట్సాప్">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="section">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <p data-en="Leading solar energy solutions provider in India since 2010. MNRE Approved. ISO 9001:2015 Certified. Bank loans available in all nationalised banks."
+                        data-te="2010 నుండి భారతదేశంలో అగ్రగామి సోలార్ ఎనర్జీ సొల్యూషన్‌ల ప్రొవైడర్. MNRE ఆమోదించినది. ISO 9001:2015 సర్టిఫైడ్. అన్ని జాతీయ బ్యాంకులలో బ్యాంక్ లోన్‌లు అందుబాటులో.">
+                        Leading solar energy solutions provider in India since 2010. MNRE Approved. ISO 9001:2015
+                        Certified. Bank loans available in all nationalised banks.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/sunproenergies" class="social-link" title="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919381241664" class="social-link" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-en="Quick Links" data-te="శీఘ్ర లింకులు">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> <span data-en="Home"
+                                    data-te="హోమ్">Home</span></a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> <span data-en="About"
+                                    data-te="మా గురించి">About</span></a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-en="Services"
+                                    data-te="సేవలు">Services</span></a></li>
+                        <li><a href="#subsidy"><i class="fas fa-chevron-right"></i> <span data-en="Subsidy"
+                                    data-te="సబ్సిడీ">Subsidy</span></a></li>
+                        <li><a href="#dealers"><i class="fas fa-chevron-right"></i> <span data-en="Dealers"
+                                    data-te="డీలర్లు">Dealers</span></a></li>
+                        <li><a href="#reviews"><i class="fas fa-chevron-right"></i> <span data-en="Reviews"
+                                    data-te="సమీక్షలు">Reviews</span></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 data-en="Our Services" data-te="మా సేవలు">Our Services</h4>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-check-circle"></i> <span data-en="Residential Solar"
+                                    data-te="నివాస సోలార్">Residential Solar</span></a></li>
+                        <li><a href="#services"><i class="fas fa-check-circle"></i> <span data-en="Commercial Solar"
+                                    data-te="వాణిజ్య సోలార్">Commercial Solar</span></a></li>
+                        <li><a href="#services"><i class="fas fa-check-circle"></i> <span data-en="Industrial Solar"
+                                    data-te="పారిశ్రామిక సోలార్">Industrial Solar</span></a></li>
+                        <li><a href="#services"><i class="fas fa-check-circle"></i> <span data-en="AMC & Maintenance"
+                                    data-te="AMC & నిర్వహణ">AMC & Maintenance</span></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 data-en="Contact Us" data-te="సంప్రదించండి">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="D.No: 6-12/2/8/TF-402, Visakhapatnam, AP - 530047"
+                            data-te="డి.నం: 6-12/2/8/TF-402, విశాఖపట్నం, AP - 530047">D.No: 6-12/2/8/TF-402,
+                            Visakhapatnam, AP - 530047</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919381241664">+91 9381241664</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:sunproenergiesvsp@gmail.com">sunproenergiesvsp@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span data-en="Mon–Sat: 9AM – 7PM IST" data-te="సోమ-శని: ఉదయం 9 – సాయంత్రం 7 IST">Mon–Sat: 9AM –
+                            7PM IST</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <span data-en="Bank Loans Available" data-te="బ్యాంక్ లోన్‌లు అందుబాటులో">Bank Loans
+                            Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-en="© 2024 SunPro Energies Pvt. Ltd. All rights reserved."
+                    data-te="© 2024 సన్ప్రో ఎనర్జీస్ ప్రై. లిమిటెడ్. అన్ని హక్కులు సురక్షితం.">
+                    © 2024 SunPro Energies Pvt. Ltd. All rights reserved.
+                </p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: var(--text-gray); text-decoration: none; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-gray)'"
+                        data-en="Privacy Policy" data-te="గోప్యతా విధానం">Privacy Policy</a>
+                    <a href="#" style="color: var(--text-gray); text-decoration: none; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-gray)'"
+                        data-en="Terms of Service" data-te="సేవా నిబంధనలు">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="https://wa.me/919381241664" target="_blank" class="float-wa" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="back-top" id="backTop" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- QUOTE MODAL -->
+    <div class="modal-overlay" id="quoteModal" onclick="if(event.target === this) closeModal('quoteModal')">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('quoteModal')"><i class="fas fa-times"></i></button>
+            <h3 data-en="Get Free Solar Quote" data-te="ఉచిత సోలార్ కోట్ పొందండి">Get Free Solar Quote</h3>
+            <form id="quoteForm" onsubmit="submitQuoteForm(event)">
+                <div class="form-group">
+                    <label data-en="Full Name *" data-te="పూర్తి పేరు *">Full Name *</label>
+                    <input type="text" id="qName" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Phone Number *" data-te="ఫోన్ నంబర్ *">Phone Number *</label>
+                    <input type="tel" id="qPhone" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="City / Address *" data-te="నగరం / చిరునామా *">City / Address *</label>
+                    <input type="text" id="qCity" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Service Type *" data-te="సేవ రకం *">Service Type *</label>
+                    <select id="qService" required>
+                        <option value="">Select Service</option>
+                        <option value="Residential Solar" data-en="Residential Solar" data-te="నివాస సోలార్">Residential
+                            Solar</option>
+                        <option value="Commercial Solar" data-en="Commercial Solar" data-te="వాణిజ్య సోలార్">Commercial
+                            Solar</option>
+                        <option value="Industrial Solar" data-en="Industrial Solar" data-te="పారిశ్రామిక సోలార్">
+                            Industrial Solar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-en="System Capacity (KW)" data-te="సిస్టమ్ కెపాసిటీ (KW)">System Capacity (KW)</label>
+                    <select id="qCapacity">
+                        <option value="">Select Capacity</option>
+                        <option value="2">2 KW</option>
+                        <option value="3">3 KW</option>
+                        <option value="5">5 KW</option>
+                        <option value="10">10 KW</option>
+                        <option value="custom">Custom / Above 10 KW</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-en="Message" data-te="సందేశం">Message</label>
+                    <textarea id="qMessage" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                    <i class="fas fa-paper-plane"></i> <span data-en="Submit & Get Callback"
+                        data-te="సమర్పించండి & కాల్బ్యాక్ పొందండి">Submit & Get Callback</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- REVIEW MODAL -->
+    <div class="modal-overlay" id="reviewModal" onclick="if(event.target === this) closeModal('reviewModal')">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('reviewModal')"><i class="fas fa-times"></i></button>
+            <h3 data-en="Share Your Experience" data-te="మీ అనుభవాన్ని పంచుకోండి">Share Your Experience</h3>
+            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1.5rem;"
+                data-en="Rate your experience and help other customers make informed decisions"
+                data-te="మీ అనుభవాన్ని రేట్ చేయండి మరియు ఇతర కస్టమర్లను సమాచార నిర్ణయాలు తీసుకోవడానికి సహాయం చేయండి">
+                Rate your experience and help other customers make informed decisions</p>
+
+            <form id="reviewForm" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label data-en="Your Rating *" data-te="మీ రేటింగ్ *">Your Rating *</label>
+                    <div class="star-picker" id="starPicker">
+                        <button type="button" onclick="setRating(1)">★</button>
+                        <button type="button" onclick="setRating(2)">★</button>
+                        <button type="button" onclick="setRating(3)">★</button>
+                        <button type="button" onclick="setRating(4)">★</button>
+                        <button type="button" onclick="setRating(5)">★</button>
+                    </div>
+                    <input type="hidden" id="ratingValue" value="0">
+                </div>
+                <div class="form-group">
+                    <label data-en="Your Name *" data-te="మీ పేరు *">Your Name *</label>
+                    <input type="text" id="rName" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="City" data-te="నగరం">City</label>
+                    <input type="text" id="rCity">
+                </div>
+                <div class="form-group">
+                    <label data-en="Service Used" data-te="ఉపయోగించిన సేవ">Service Used</label>
+                    <select id="rService">
+                        <option value="Residential Solar" data-en="Residential Solar" data-te="నివాస సోలార్">Residential
+                            Solar</option>
+                        <option value="Commercial Solar" data-en="Commercial Solar" data-te="వాణిజ్య సోలార్">Commercial
+                            Solar</option>
+                        <option value="Industrial Solar" data-en="Industrial Solar" data-te="పారిశ్రామిక సోలార్">
+                            Industrial Solar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-en="Your Review *" data-te="మీ సమీక్ష *">Your Review *</label>
+                    <textarea id="rText" placeholder="Share your experience, what you liked, any improvements..."
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label data-en="Additional Notes" data-te="అదనపు గమనికలు">Additional Notes</label>
+                    <textarea id="rNotes" placeholder="Any additional comments or feedback..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                    <i class="fas fa-star"></i> <span data-en="Publish Review" data-te="సమీక్ష ప్రచురించండి">Publish
+                        Review</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+        let selectedRating = 0;
+
+        // Use relative API path
+        const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+  ? '/api' 
+  : '/api';
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                background: ${type === 'success' ? '#22C55E' : '#EF4444'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                z-index: 9999;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+                animation: slideInRight 0.3s ease;
+                max-width: 350px;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+
+        // Add toast animations
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // Load reviews from backend
+        async function loadReviews() {
+            try {
+                console.log('Fetching reviews from:', `${API_BASE_URL}/reviews/all`);
+                const response = await fetch(`${API_BASE_URL}/reviews/all`);
+                const result = await response.json();
+                console.log('Reviews response:', result);
+
+                if (result.success && result.data.length > 0) {
+                    const container = document.getElementById('userReviewsContainer');
+                    container.innerHTML = '';
+                    const colors = ['#C13A0A', '#D9440D', '#E8551E', '#FF6B35'];
+
+                    result.data.forEach(review => {
+                        let starsHtml = '';
+                        for (let i = 1; i <= 5; i++) {
+                            starsHtml += `<i class="${i <= review.rating ? 'fas' : 'far'} fa-star"></i>`;
+                        }
+
+                        const bgColor = colors[Math.floor(Math.random() * colors.length)];
+                        const card = document.createElement('div');
+                        card.className = 'review-card animate-in';
+                        card.innerHTML = `
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background: ${bgColor};">${review.initials || 'A'}</div>
+                                <div class="reviewer-info">
+                                    <h4>${review.name}</h4>
+                                    <div class="meta">${review.city || 'India'} • ${review.service || 'Solar'}</div>
+                                </div>
+                            </div>
+                            <div class="review-stars">${starsHtml}</div>
+                            <p class="review-text">"${review.review}"</p>
+                            ${review.notes ? `<div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;padding:0.75rem;background:rgba(217,68,13,0.08);border-radius:8px;border-left:3px solid var(--primary);"><strong>Note:</strong> ${review.notes}</div>` : ''}
+                            <div class="review-meta">
+                                <span class="review-service"><i class="fas fa-solar-panel"></i> ${review.service}</span>
+                                <span style="font-size:0.75rem;color:var(--text-muted);">${new Date(review.createdAt).toLocaleDateString()}</span>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+            }
+        }
+
+        function toggleMobileMenu() {
+            const nav = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = 'var(--bg-light)';
+                nav.style.padding = '1rem';
+                nav.style.borderBottom = '2px solid var(--border-light)';
+                nav.style.boxShadow = 'var(--shadow-md)';
+                hamburger.innerHTML = '<i class="fas fa-times"></i>';
+            }
+        }
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'te' : 'en';
+            applyLanguage();
+            localStorage.setItem('lang', currentLanguage);
+        }
+
+        function applyLanguage() {
+            const attr = `data-${currentLanguage}`;
+            
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const text = el.getAttribute(attr);
+                if (text && el.tagName !== 'OPTION') {
+                    el.textContent = text;
+                }
+            });
+            
+            document.querySelectorAll('option[data-en]').forEach(el => {
+                const text = el.getAttribute(attr);
+                if (text && text !== 'Select Service' && text !== 'Select Capacity') {
+                    el.textContent = text;
+                }
+            });
+            
+            document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+                const placeholderAttr = `data-${currentLanguage}-placeholder`;
+                const text = el.getAttribute(placeholderAttr);
+                if (text) el.placeholder = text;
+            });
+            
+            const langText = document.getElementById('langText');
+            if (langText) {
+                langText.textContent = currentLanguage === 'en' ? '🌐 తెలుగు' : '🌐 English';
+            }
+        }
+
+        // Theme toggle
+        const themeBtn = document.getElementById('themeBtn');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.toggle('dark-mode');
+                themeBtn.innerHTML = isDark ? '<i class="fas fa-sun" style="color: #FFD700;"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        }
+
+        function loadPreferences() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                if (themeBtn) {
+                    themeBtn.innerHTML = '<i class="fas fa-sun" style="color: #FFD700;"></i>';
+                }
+            }
+            
+            if (localStorage.getItem('lang') === 'te') {
+                currentLanguage = 'te';
+                applyLanguage();
+            }
+        }
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function setRating(value) {
+            selectedRating = value;
+            document.getElementById('ratingValue').value = value;
+            const buttons = document.querySelectorAll('#starPicker button');
+            buttons.forEach((btn, i) => {
+                if (i < value) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        // Submit review
+        async function submitReview(e) {
+            e.preventDefault();
+            if (selectedRating === 0) {
+                showToast('Please select a star rating', 'error');
+                return;
+            }
+
+            const name = document.getElementById('rName').value;
+            const city = document.getElementById('rCity').value;
+            const service = document.getElementById('rService').value;
+            const review = document.getElementById('rText').value;
+            const notes = document.getElementById('rNotes').value;
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+            try {
+                console.log('Submitting review to:', `${API_BASE_URL}/reviews/submit`);
+                const response = await fetch(`${API_BASE_URL}/reviews/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        name, 
+                        city: city || 'India', 
+                        service, 
+                        rating: selectedRating, 
+                        review, 
+                        notes: notes || '' 
+                    })
+                });
+
+                const result = await response.json();
+                console.log('Review response:', result);
+
+                if (result.success) {
+                    showToast(result.message || 'Thank you for your review!');
+                    document.getElementById('reviewForm').reset();
+                    selectedRating = 0;
+                    document.getElementById('ratingValue').value = 0;
+                    const buttons = document.querySelectorAll('#starPicker button');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    closeModal('reviewModal');
+
+                    document.getElementById('userReviewsContainer').innerHTML = '';
+                    setTimeout(() => loadReviews(), 1000);
+                } else {
+                    showToast(result.message || 'Failed to submit review', 'error');
+                }
+            } catch (error) {
+                console.error('Review submission error:', error);
+                showToast('Network error. Please make sure the server is running.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        }
+
+        // Submit quote
+        async function submitQuoteForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('qName').value;
+            const phone = document.getElementById('qPhone').value;
+            const city = document.getElementById('qCity').value;
+            const service = document.getElementById('qService').value;
+            const capacity = document.getElementById('qCapacity').value;
+            const message = document.getElementById('qMessage').value;
+
+            if (!name || !phone || !city || !service) {
+                showToast('Please fill all required fields', 'error');
+                return;
+            }
+
+            const cleanPhone = phone.replace(/\D/g, '');
+            if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+                showToast('Please enter a valid 10-digit Indian phone number', 'error');
+                return;
+            }
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+            try {
+                console.log('Submitting quote to:', `${API_BASE_URL}/quotes/submit`);
+                const response = await fetch(`${API_BASE_URL}/quotes/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        name, 
+                        phone: cleanPhone, 
+                        city, 
+                        serviceType: service, 
+                        systemCapacity: capacity || 'Not specified', 
+                        message: message || '' 
+                    })
+                });
+
+                const result = await response.json();
+                console.log('Quote response:', result);
+
+                if (result.success) {
+                    showSuccessModal(result.message || 'Thank you! Our team will contact you soon.');
+                    closeModal('quoteModal');
+                    document.getElementById('quoteForm').reset();
+                } else {
+                    showToast(result.message || 'Failed to submit quote', 'error');
+                }
+            } catch (error) {
+                console.error('Quote submission error:', error);
+                showToast('Network error. Please make sure the server is running.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        }
+
+        // Submit CTA
+        async function submitCTA() {
+            const name = document.getElementById('ctaName').value;
+            const phone = document.getElementById('ctaPhone').value;
+            const city = document.getElementById('ctaCity').value;
+
+            if (!name || !phone) {
+                showToast('Please enter your name and phone number', 'error');
+                return;
+            }
+
+            const cleanPhone = phone.replace(/\D/g, '');
+            if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+                showToast('Please enter a valid 10-digit phone number', 'error');
+                return;
+            }
+
+            const btn = document.querySelector('.quick-form-row .btn-white');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/quotes/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        name, 
+                        phone: cleanPhone, 
+                        city: city || 'Not specified', 
+                        serviceType: 'Residential Solar', 
+                        systemCapacity: 'Not specified', 
+                        message: 'Quick enquiry from CTA section' 
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showSuccessModal(result.message || 'Thank you! Our team will contact you soon.');
+                    document.getElementById('ctaName').value = '';
+                    document.getElementById('ctaPhone').value = '';
+                    document.getElementById('ctaCity').value = '';
+                } else {
+                    showToast(result.message || 'Failed to submit', 'error');
+                }
+            } catch (error) {
+                console.error('CTA submission error:', error);
+                showToast('Network error. Please try again.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        function showSuccessModal(message) {
+            const existingModal = document.getElementById('successModal');
+            if (existingModal) existingModal.remove();
+
+            const modalHtml = `
+                <div class="modal-overlay open" id="successModal" onclick="if(event.target === this) closeModal('successModal')">
+                    <div class="modal" style="text-align: center; max-width: 450px;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary); margin-bottom: 1rem;">Thank You!</div>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-gray);">${message}</p>
+                        <div style="background: linear-gradient(135deg, rgba(217,68,13,0.1), rgba(232,85,30,0.05)); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                                <i class="fas fa-clock" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 0.9rem; color: var(--text-gray);">Our solar expert will contact you within 24 hours</span>
+                            </div>
+                            <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                                <i class="fas fa-file-contract" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 0.9rem; color: var(--text-gray);">Free site survey & customized proposal included</span>
+                            </div>
+                            <div style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-rupee-sign" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 0.9rem; color: var(--text-gray);">Subsidy eligibility check will be done</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="closeModal('successModal')" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-check-circle"></i> Got it, Thanks!
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+        }
+
+        // Back to top
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            if (backTop) {
+                backTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            }
+        });
+        
+        if (backTop) {
+            backTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        const nav = document.getElementById('navLinks');
+                        if (nav && nav.style.display === 'flex' && window.innerWidth <= 1024) {
+                            nav.style.display = 'none';
+                            const hamburger = document.getElementById('hamburger');
+                            if (hamburger) hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                }
+            });
+        });
+
+        // Escape key closes modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.open').forEach(m => {
+                    m.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            const nav = document.getElementById('navLinks');
+            if (window.innerWidth > 1024 && nav) {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = '';
+                nav.style.position = '';
+                nav.style.background = '';
+                nav.style.padding = '';
+                nav.style.borderBottom = '';
+                nav.style.boxShadow = '';
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPreferences();
+            loadReviews();
+            console.log('SunPro Energies - Page Loaded Successfully');
+            console.log('API Base URL:', API_BASE_URL);
+        });
+
+        // Expose functions globally
+        window.toggleLanguage = toggleLanguage;
+        window.toggleMobileMenu = toggleMobileMenu;
+        window.openModal = openModal;
+        window.closeModal = closeModal;
+        window.setRating = setRating;
+        window.submitReview = submitReview;
+        window.submitQuoteForm = submitQuoteForm;
+        window.submitCTA = submitCTA;
+    </script>
+</body>
+
+</html>
