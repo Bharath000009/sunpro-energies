@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunproenergies.in/sitemap.xml
+
+# Disallow admin pages from search
+Disallow: /admin-login
+Disallow: /dashboard
+Disallow: /api/

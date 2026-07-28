@@ -456,6 +456,15 @@ app.get('/dashboard', (req, res) => {
 app.get('/admin-login', (req, res) => {
     res.sendFile(path.join(__dirname, 'login.html'));
 });
+// SEO Routes
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'robots.txt'));
+});
+
 
 // ============ FRONTEND ROUTES ============
 app.get('/', (req, res) => {
